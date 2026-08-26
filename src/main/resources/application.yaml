@@ -3,12 +3,15 @@ server:
 
 spring:
   application:
-    name: Config-Server
+    name: config-server
   profiles:
     active: native
   cloud:
     config:
       server:
+        git:
+          uri: https://github.com/LahiruMudith/medix-portal-configuration.git
+          search-paths: platform,services
         native:
           search-locations:
             - classpath:/configurations
